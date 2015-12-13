@@ -20,8 +20,10 @@ import simbad.sim.Box;
 import simbad.sim.EnvironmentDescription;
 import simbad.sim.PastilleAgent;
 import simbad.sim.PastilleAgentPartielle;
+import simbad.sim.PieceRobot;
 import simbad.sim.Rectangle;
 import simbad.sim.Robot;
+import simbad.sim.TypeProduit;
 import simbad.sim.Wall;
 
 public class EnvironmentDescriptionImpl extends Demo {
@@ -135,7 +137,21 @@ public class EnvironmentDescriptionImpl extends Demo {
         Wall w11 = new Wall(new Vector3d(0, 0.35, 0), 0.48f, 0.15f, 0.1f,this);
            w11.rotate90(1);
         add(w11);*/
-           Piece piece = new Piece(new Vector3d(0, 0, 0), 0.48f, 0.15f, 0.55f, this);
+           //Piece piece = new Piece(new Vector3d(0, 0, 0), 0.48f, 0.15f, 0.55f, this);
+          /* Arch arch = new Arch(new Vector3d(0, 0, 0), this);
+           add(arch);*/
+           PieceRobot gp1 = new PieceRobot(new Vector3d(6.25 - 0.48/2 + 0.02, 0, -3 + 0.10), this, TypeProduit.GRANDPRODUIT);
+           add(gp1);
+           PieceRobot gp2 = new PieceRobot(new Vector3d(6.25 - 0.48/2 + 0.02, 0, -3 + 0.10 + 0.10), this, TypeProduit.GRANDPRODUIT);
+           add(gp2);
+           PieceRobot gp3 = new PieceRobot(new Vector3d(6.25 - 0.48/2 + 0.02, 0, -3 + 0.10 + 2*0.10), this, TypeProduit.GRANDPRODUIT);
+           add(gp3);
+           PieceRobot pp1 = new PieceRobot(new Vector3d(6.25 - 0.31/2, 0, 3 - 0.10), this, TypeProduit.PETITPRODUIT);
+           add(pp1);
+           PieceRobot pp2 = new PieceRobot(new Vector3d(6.25 - 0.31/2, 0, 3 - 0.10 - 0.10), this, TypeProduit.PETITPRODUIT);
+           add(pp2);
+           PieceRobot pp3 = new PieceRobot(new Vector3d(6.25 - 0.31/2, 0, 3 - 0.10 - 2*0.10), this, TypeProduit.PETITPRODUIT);
+           add(pp3);
            
           // Vector3d [] vectorTab = new Vector3d[]{
         //	   new Vector3d(6.35,0.2,-4.0),
